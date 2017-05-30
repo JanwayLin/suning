@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			var pixclPatio = 1 / window.devicePixelRatio;
+			document.write('<meta name="viewport" content="width=device-width,initial-scale='+pixclPatio+',minimum-scale='+pixclPatio+',maximum-scale='+pixclPatio+',user-scalable=no" />');
+			
+			var html = document.getElementsByTagName('html')[0];
+			var pageWidth = html.getBoundingClientRect().width;
+			html.style.fontSize = pageWidth / 16 + 'px';
+		</script>
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/swiper.min.css" />
+
+		<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+		<style>
+	html,body{height:100%};
+ /*html,
+    body {
+        position: relative;
+        height: 100%;
+    }
+    
+    body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+    }*/
+    
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+		</style>
+		
+		<!--
+			1、[固定定位]元素内容中有[input]的话，会导致触发键盘之后导致固定定位错位。
+			2、不管使用背景图还是img，一定要调整对应的size（大小）
+				如果图片大小和容器大小一致，那么可以使用100%
+				如果图片大小和容器带下不一样，那么需针对图片分别设置宽/高、x/y
+			3、碰到文字，一定要测量行高，不然高度会不准确
+			4、标签的特性需要熟记于心
+		-->
+	</head>
+	<body>
+		<header class="head_box">
+			<a href="" class="btn_type"></a>
+			<div class="search_box">
+				<form action="" class="search_form">
+					<!--<i class="ico-search"></i>-->
+					<input type="text" class="search_input" placeholder="家装4件75折"/>
+				</form>
+			</div>
+			<a href="" class="shop_car"></a>
+		</header>
+		<section class="wrap">
+			 <!-- Swiper -->
+
+              <div class="swiper-container banner" id="container">
+                <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href=""><img src="img/banner1.jpg" alt=""></a></div>
+            <div class="swiper-slide"><a href=""><img src="img/banner2.jpg" alt=""></a></div>
+            <div class="swiper-slide"><a href=""><img src="img/banner3.jpg" alt=""></a></div>
+            <div class="swiper-slide"><a href=""><img src="img/banner4.jpg" alt=""></a></div>
+            <div class="swiper-slide"><a href=""><img src="img/banner5.jpg" alt=""></a></div>
+            <div class="swiper-slide"><a href=""><img src="img/banner6.jpg" alt=""></a></div>
+            <div class="swiper-slide"><a href=""><img src="img/banner7.jpg" alt=""></a></div>
+            <div class="swiper-slide"><a href=""><img src="img/banner8.jpg" alt=""></a></div>
+
+                </div>
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <!-- <div class="swiper-button-next "></div>
+                <div class="swiper-button-prev"></div> -->
+            </div>
+
+			<nav class="nav clearfix">
+				<a href="" class="nav_item">
+					<img src="img/nav1.png" alt="" />
+					<strong class="nav_title">分类</strong>
+				</a>
+				<a href="" class="nav_item">
+					<img src="img/nav2.png" alt="" />
+					<strong class="nav_title">大聚惠</strong>
+				</a>
+				<a href="" class="nav_item">
+					<img src="img/nav3.png" alt="" />
+					<strong class="nav_title">苏宁超市</strong>
+				</a>
+				<a href="" class="nav_item">
+					<img src="img/nav4.png" alt="" />
+					<strong class="nav_title">红孩子母婴</strong>
+				</a>
+				<a href="" class="nav_item">
+					<img src="img/nav5.png" alt="" />
+					<strong class="nav_title">爆款手机</strong>
+				</a>
+				<a href="" class="nav_item">
+					<img src="img/nav6.png" alt="" />
+					<strong class="nav_title">服装城</strong>
+				</a>
+				<a href="" class="nav_item">
+					<img src="img/nav7.png" alt="" />
+					<strong class="nav_title">赚钱</strong>
+				</a>
+				<a href="" class="nav_item">
+					<img src="img/nav8.png" alt="" />
+					<strong class="nav_title">领云帖</strong>
+				</a>
+				<a href="" class="nav_item">
+					<img src="img/nav9.png" alt="" />
+					<strong class="nav_title">身边苏宁</strong>
+				</a>
+				<a href="" class="nav_item">
+					<img src="img/nav10.png" alt="" />
+					<strong class="nav_title">生活家电</strong>
+				</a>
+			</nav>
+			<!-- <div class="suning_tt">
+				<div class="tt_title"></div>
+				<div class="tt_line"></div>
+				<div class="tt_list">
+					<a href="" class="item">
+						HTML5移动端布局实战开发课程
+					</a>
+					<a href="" class="item">
+						HTML5移动端布局实战开发课程
+					</a>
+				</div>
+			</div> -->
+			<div class="v5-space"></div>
+			<a href="" class="temai">
+				<div>
+					<img src="img/temai.jpg">
+				</div>
+			</a>
+			<div class="shoping_type">
+				<div class="type_top">
+					<a href="" class="big_img">
+						<img src="img/shoping-1.jpg"/>
+					</a>
+					<a href="" class="sub_img">
+						<img src="img/shoping-2.jpg"/>
+					</a>
+					<a href="" class="sub_img">
+						<img src="img/shoping-2.jpg"/>
+					</a>
+				</div>
+				<div class="type_bottom clearfix">
+					<a href="" class="bottom_item">
+						<img src="img/shoping-3.jpg" alt="" />
+					</a>
+					<a href="" class="bottom_item">
+						<img src="img/shoping-3.jpg" alt="" />
+					</a>
+					<a href="" class="bottom_item">
+						<img src="img/shoping-3.jpg" alt="" />
+					</a>
+					<a href="" class="bottom_item">
+						<img src="img/shoping-3.jpg" alt="" />
+					</a>
+					<a href="" class="bottom_item">
+						<img src="img/shoping-3.jpg" alt="" />
+					</a>
+					<a href="" class="bottom_item">
+						<img src="img/shoping-3.jpg" alt="" />
+					</a>
+					<a href="" class="bottom_item">
+						<img src="img/shoping-3.jpg" alt="" />
+					</a>
+					<a href="" class="bottom_item">
+						<img src="img/shoping-3.jpg" alt="" />
+					</a>
+				</div>
+			</div>
+			<div class="suning_qg">
+				<header class="head">
+					<div class="head_left">
+						<h3 class="title"></h3>
+						<div class="time_box">
+							<span class="time_name">
+								20点场
+							</span>
+							<div class="updeta_time">
+								<span class="time_item">03</span>
+								<span class="time_ico">:</span>
+								<span class="time_item">54</span>
+								<span class="time_ico">:</span>
+								<span class="time_item tips">20</span>
+							</div>
+						</div>
+					</div>
+					<div class="head_right">
+						<a href="" class="more">
+							吃货上新季
+						</a>
+						<i class="ico_more"></i>
+					</div>
+				</header>
+				<div class="shoping_box">
+					<ul class="shoping_list">
+						<li class="list_item">
+							<a href="" class="item_img">
+								<img src="img/shoping-4.jpg" alt="" />
+							</a>
+							<div class="item_bottom">
+								<strong class="jiage">￥15.90</strong>
+								<del class="yuanjia">￥50.90</del>
+								<div class="zhekou">
+									<span class="big_font">5.<span>8折</span></span>
+								</div>
+							</div>
+						</li>
+						<li class="list_item">
+							<a href="" class="item_img">
+								<img src="img/shoping-4.jpg" alt="" />
+							</a>
+							<div class="item_bottom">
+								<strong class="jiage">￥15.90</strong>
+								<del class="yuanjia">￥50.90</del>
+								<div class="zhekou">
+									<span class="big_font">5.<span>8折</span></span>
+								</div>
+							</div>
+						</li>
+						<li class="list_item">
+							<a href="" class="item_img">
+								<img src="img/shoping-4.jpg" alt="" />
+							</a>
+							<div class="item_bottom">
+								<strong class="jiage">￥15.90</strong>
+								<del class="yuanjia">￥50.90</del>
+								<div class="zhekou">
+									<span class="big_font">5.<span>8折</span></span>
+								</div>
+							</div>
+						</li>
+						<li class="list_item">
+							<a href="" class="item_img">
+								<img src="img/shoping-4.jpg" alt="" />
+							</a>
+							<div class="item_bottom">
+								<strong class="jiage">￥15.90</strong>
+								<del class="yuanjia">￥50.90</del>
+								<div class="zhekou">
+									<span class="big_font">5.<span>8折</span></span>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				
+			</div>
+		</section>
+		 <!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+ 	pagination: '.swiper-pagination',
+        // nextButton: '.swiper-button-next',
+        // prevButton: '.swiper-button-prev',
+        loop: true,
+        paginationClickable: true,
+        spaceBetween: 0,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false
+    });
+
+    var contain = document.getElementById('container');
+    contain.onmouseover = function() {
+        swiper.stopAutoplay();
+    };
+    contain.onmouseout = function() {
+        swiper.startAutoplay();
+    };
+   
+   
+ //    $('body').bind('touchmove', function(e) { 
+	// // var e=evt||window.event;
+ //    e.preventDefault();               //禁用默认滚动行为，需要自己实现滚动
+     // var t = document.documentElement.scrollTop || document.body.scrollTop;
+     // console.log(t);
+
+//      $('body').scroll(function(){
+
+//      	var t=$('.wrap').scrollTop();
+//      	console.log(t);
+// 			     	 if (t) { 
+// 			 	//console.log("1111111111");
+// 			 $(".head_box").addClass('togg');
+// 			 }else{
+// $(".head_box").removeClass('togg');
+// 			 }
+//      })
+
+// });
+
+
+//获取网页已滚动高度
+var stop=Math.max(document.documentElement.scrollTop,document.body.scrollTop);
+
+$('body').onscroll=function(){
+	console.log('000');
+	if(Math.max(document.documentElement.scrollTop,document.body.scrollTop)-stop>0){
+		console.log("1111111111");
+		$(".head_box").addClass('togg');
+	}else{
+		console.log("2222222222222");
+			$(".head_box").removeClass('togg');
+	}
+
+};
+    </script>
+	</body>
+</html>
